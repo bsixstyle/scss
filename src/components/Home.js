@@ -16,7 +16,11 @@ function Home() {
       <h3>The bsix</h3>
       <p>
         bsixstyle is css / scss framework,{" "}
-        <a target="_blank" className="link" href=" https://github.com/bsixstyle/scss.git">
+        <a
+          target="_blank"
+          className="link"
+          href=" https://github.com/bsixstyle/scss.git"
+        >
           {" "}
           the sources
         </a>{" "}
@@ -53,6 +57,12 @@ function Home() {
       <p>
         Major components such as buttons, form, table, header etc...no need
         extra classes, it's only html standard.
+      </p>
+      <br />
+      <h3>Why Dark Mode?</h3>
+      <p>
+        Now days peoples spent much time play with gadget, Let’s face it, dark
+        modes are trending. dark mode is save batery and does not make my eyes get tired more quickly.
       </p>
       <br />
       <hr />
