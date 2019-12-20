@@ -1,0 +1,97 @@
+//colors
+// $prime: #3498db !default;
+$prime: #3498db !default;
+$warn: #f1c40f !default;
+$danger: #e74c3c !default;
+$ok: #4caf50 !default;
+$dark: #666 !default;
+$light: #e6e6e6 !default;
+$white: #fff !default;
+$black: #000000 !default;
+
+//font
+$sans: monospace, sans-serif !default;
+
+$font-h:  1.8em !default;
+$font-b:  1.125em !default;
+$font-m: 1em !default;
+$font-s: 0.75em !default;
+
+$m: 0.4em;
+$pad-text: .375rem .75rem !default;
+
+//margin
+$mr: 0.313em;
+
+//// Grid
+$grid-c: 12 !default;
+
+// Spacing
+$space: 2em !default;
+$space-big: 2.5em  !default;
+$space-med: 1.250em !default;
+$space-small:0.625em !default;
+
+$cubic: cubic-bezier(.64,.09,.08,1) !default;
+//border all
+$bd: 0.050em solid !default;
+$bdis: 0.050em dashed !default;
+
+//media query
+ $med-m: 48em !default;
+// $med-l: 60em; // 960px
+// $med-xl: 80em; // 1280px
+
+
+$themes: (
+  dark: (
+    bg: darken($dark, 20%),
+    text: $light,
+    bg-form: darken($dark, 20%),
+    border-form: $bd $dark,
+    line:$bdis $dark,
+    dis-form: darken($dark, 5%),
+    cr: $light,
+    header: darken($dark, 5%),
+    header-text : $light,
+    shadow: $white,
+    misc : darken($dark, 20%)
+  ),
+  prime: (
+    bg: darken($white, 3%),
+    text: $dark,
+    bg-form: $white,
+    line:$bdis $prime,
+    border-form: $bd darken($light, 5%),
+    dis-form: lighten($light, 1%),
+    cr: $dark,
+    header: darken($prime, 5%),
+    header-text : $white,
+    shadow: $black,
+    misc : $light
+  )
+);
+
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

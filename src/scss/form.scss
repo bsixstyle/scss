@@ -1,0 +1,55 @@
+@import "./import/variable";
+
+div.input {
+  margin-bottom: $m * 2;
+  padding: 0.3em;
+
+  input:not([type="submit"]):not([type="reset"]):not([type="button"]),
+  select,
+  textarea,
+  label {
+    margin-bottom: $m;
+  }
+}
+
+input:not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: $bd lighten($dark, 20%);
+  padding: $pad-text;
+  outline: none;
+  background-color:$white;
+  &:focus,
+  &:active {
+    border-color: $prime;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    border: $bd $light;
+    background: transparent;
+  }
+
+  &:read-only {
+    cursor: pointer;
+  }
+
+  &:invalid {
+    border: $bd lighten($danger, 10%);
+  }
+
+}
+
+[type="checkbox"],
+[type="radio"] {
+  margin-right: $m;
+  &:disabled {
+    cursor: not-allowed;
+
+    & + label {
+      cursor: not-allowed;
+    }
+  }
+}

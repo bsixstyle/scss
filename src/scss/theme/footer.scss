@@ -1,0 +1,7 @@
+@import "./variable.scss";
+
+footer {
+    @include themed() {
+        border-top: t("line");
+      }
+}

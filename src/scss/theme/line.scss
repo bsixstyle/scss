@@ -1,0 +1,7 @@
+@import './variable.scss';
+
+hr {
+  @include themed() {
+    border-top: t("line");
+  }
+}

@@ -1,0 +1,39 @@
+@import "./import/variable";
+
+[data-tooltip] {
+  position: relative;
+
+  &:after,
+  &:before {
+    position: absolute;
+    z-index: 4;
+    visibility: hidden;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    top: calc(100% - 3.5em);
+    left: 0;
+    margin-top: 12px;
+  }
+
+  &:after {
+    margin-left: 0;
+    font-size: $font-m;
+    background: $black;
+    color: $white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    padding: $m;
+    line-height: $m;
+    content: attr(data-tooltip);
+    white-space: nowrap;
+  }
+
+  &:hover:after,
+  &:focus:after,
+  &:hover:before,
+  &:focus:before {
+    visibility: visible;
+    height: auto;
+  }
+}

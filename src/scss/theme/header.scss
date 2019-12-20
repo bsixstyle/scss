@@ -1,0 +1,28 @@
+@import "./variable.scss";
+
+header {
+  @include themed() {
+    background: t("header");
+    box-shadow: none;
+    color: t("text");
+  }
+
+  a {
+    @include themed() {
+      color: t("header-text");
+    }
+  }
+
+  label {
+    @include themed() {
+      color: t("header-text");
+    }
+  }
+
+  .dropdown li a {
+    @include themed() {
+      background: t("bg");
+      color: t("text");
+    }
+  }
+}

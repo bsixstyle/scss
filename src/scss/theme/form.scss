@@ -1,0 +1,21 @@
+@import "./variable.scss";
+
+input:not([type="submit"]):not([type="reset"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  @include themed() {
+    background: t("bg-form");
+    color: t("text");
+  }
+
+  &:disabled {
+    @include themed() {
+      border-color: t("dis-form");
+      background: transparent;
+    }
+  }
+
+  &:read-only {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,48 @@
+@import "./import/variable";
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  td {
+    padding: $pad-text;
+    border: $bd $light;
+  }
+
+  th {
+    padding: $pad-text;
+    border: $bd $light;
+    font-style: bold;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: $med-m) {
+  table.responsive {
+    border: 0;
+    caption {
+      font-size: $font-m;
+    }
+    tr {
+      display: block;
+      margin-bottom: $space-small;
+      th {
+        display: none;
+      }
+
+      td {
+        display: block;
+        text-align: right;
+      }
+
+      td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+      }
+    }
+
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+}

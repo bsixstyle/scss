@@ -1,0 +1,28 @@
+@import "./import/variable";
+
+blockquote {
+  margin: 0;
+  footer:before {
+    content: "— ";
+  }
+
+  p {
+    padding: $space;
+    background: darken($white, 3%);
+  }
+
+  p::before {
+    content: "\201C";
+  }
+
+  p::after {
+    content: "\201D";
+  }
+
+  footer {
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+    font-size: $font-s;
+  }
+}

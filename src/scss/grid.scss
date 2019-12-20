@@ -1,0 +1,53 @@
+@import "./import/variable";
+
+.container {
+  margin: 0 auto;
+  max-width: 95rem;
+  width: 95%;
+}
+
+@media (min-width: $med-m) {
+  .container {
+    margin: 0 auto;
+    max-width: 95rem;
+    width: 85%;
+  }
+
+  .c {
+    -ms-flex-preferred-size: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  @for $i from 1 through $grid-c {
+    .c#{$i} {
+      width: 100% / $grid-c * $i;
+    }
+    .m#{$i} {
+      margin-left: 100% / $grid-c * $i;
+    }
+  }
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: block;
+  @media (min-width: $med-m) {
+    display: flex;
+  }
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.row:before,
+.row:after {
+  content: ""; 
+  box-sizing: border-box;
+}
+
+.row:after {
+  clear: both;
+}

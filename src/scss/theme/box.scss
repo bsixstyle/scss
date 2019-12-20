@@ -1,0 +1,7 @@
+@import './variable.scss';
+
+.outline {
+    @include themed() {
+        border:t("border-form");
+      }
+  }

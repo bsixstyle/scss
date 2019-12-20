@@ -1,0 +1,10 @@
+@import "./variable";
+
+blockquote {
+  p {
+    @include themed() {
+      background: darken(t('bg'), 3%);
+      color: t('text');
+    }
+  }
+}

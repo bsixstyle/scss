@@ -1,0 +1,57 @@
+@import "./import/variable";
+
+@mixin active() {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset,0 0 9px rgba(0, 0, 0, 0.2) inset;
+}
+
+@mixin disabled() {
+  background-color: darken($light, 5%);
+  cursor: not-allowed;
+  color:$dark;
+  text-decoration: line-through;
+}
+
+button.active,
+.button.active,
+[type="button"].active,
+[type="submit"].active,
+[type="reset"].active {
+  @include active();
+}
+
+button,
+.button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  cursor: pointer;
+  font: $font-m $sans;
+  padding: $pad-text;
+  border: none;
+  outline: none;
+  background-color: $light;
+  transition: all 0.1s ease-out;
+  &:active {
+    @include active();
+  }
+
+  &:disabled {
+    @include disabled();
+  }
+}
+
+button.small,
+.button.small,
+[type="button"].small,
+[type="submit"].small,
+[type="reset"].small {
+  font-size: $font-s;
+}
+
+button.big,
+.button.big,
+[type="button"].big,
+[type="submit"].big,
+[type="reset"].big {
+  font-size: $font-h;
+}

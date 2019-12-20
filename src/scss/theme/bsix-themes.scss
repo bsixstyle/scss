@@ -1,0 +1,26 @@
+@import './variable.scss';
+
+body.dark {
+  background: darken($dark, 30%);
+  color : $light;
+}
+
+body.prime {
+  background: darken($white, 3%);
+  color:$black;
+}
+
+  @import 
+  './dropdown.scss',
+  './form.scss',
+  './header.scss',
+  './line.scss',
+  './link.scss',
+  './sidebar.scss',
+  './table.scss',
+  './tab.scss',
+  './box.scss',
+  './footer.scss',
+  './modal.scss',
+  './blockquote.scss',
+  './tooltip.scss';

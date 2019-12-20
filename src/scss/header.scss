@@ -1,0 +1,100 @@
+@import "./import/variable";
+header {
+  background: $white;
+  box-shadow: 0 0.1px 0.5px 0 #7c7c7c, 0 0.5px 3px 0 #7c7c7c;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  a.brand {
+    font-size: $font-b;
+    color: $dark;
+    margin-left: $space;
+    font-weight: bold;
+    background: none;
+  }
+
+  ul {
+    overflow: hidden;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        display: block;
+        font-size: $font-m;
+        background: none;
+      }
+    }
+  }
+
+  .header[type="checkbox"] {
+    display: none;
+  }
+
+  label.header {
+    float: right;
+    font-size: $font-h;
+  }
+
+  .dropdown li a {
+    &:hover {
+      border: none;
+    }
+  }
+
+  .header[type="checkbox"] {
+    &:checked ~ {
+      ul {
+        display: block;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: $med-m) {
+  header {
+    a.brand {
+      margin-left: auto;
+    }
+
+    li {
+      float: left;
+
+      a {
+        padding: 0 $m;
+        font-size: $font-m;
+      }
+    }
+
+    ul {
+      clear: none;
+      float: right;
+      display: inherit;
+    }
+
+    label.header {
+      display: none;
+    }
+  }
+}
+
+header.fixed {
+  position: fixed;
+  width: 100%;
+  @media (min-width: $med-m) {
+    z-index: 1;
+
+    width: inherit;
+  }
+}
+
+header.fixed + div {
+  clear: both;
+  padding-top: 4em;
+}
+
+header + div {
+  clear: both;
+  padding-top: 1em;
+}

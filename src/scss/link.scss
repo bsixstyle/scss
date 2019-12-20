@@ -1,0 +1,30 @@
+@import "./import/variable";
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-shadow: 0 0 0.01em $dark, 0 0 0.02em $dark;
+  }
+}
+
+a.link {
+  background: linear-gradient(
+    to top,
+    rgba($light, 0.8) 50%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  background-size: 100% 200%;
+  background-position: 0 10%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  color: inherit;
+  transition: background-position 0.1s $cubic;
+  will-change: background-position;
+  &:active {
+    color: inherit;
+  }
+  &:hover {
+    background-position: 0 100%;
+  }
+}

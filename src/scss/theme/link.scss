@@ -1,0 +1,9 @@
+@import "./variable.scss";
+
+a {
+  &:hover {
+    @include themed() {
+      text-shadow: 0 0 0.01em t("shadow"), 0 0 0.02em t("shadow");
+    }
+  }
+}

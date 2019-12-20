@@ -1,0 +1,11 @@
+@import "./variable.scss";
+
+.dropdown {
+  ul,
+  div {
+    @include themed() {
+      background: t("bg");
+      border: t("border-form");
+    }
+  }
+}

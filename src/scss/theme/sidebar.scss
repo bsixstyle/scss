@@ -1,0 +1,34 @@
+@import "./variable.scss";
+
+.sidebar {
+  &:checked {
+    ~ aside {
+      display: block;
+    }
+
+    + label.sidebar {
+      @include themed() {
+        background: t("bg-form");
+      }
+    }
+  }
+}
+
+label.sidebar {
+  @include themed() {
+    background: t("bg");
+    color: t("text");
+  }
+}
+aside {
+  @include themed() {
+    background: t("bg");
+    color: t("text");
+  }
+
+  a {
+    @include themed() {
+      color: t("text");
+    }
+  }
+}

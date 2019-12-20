@@ -1,0 +1,50 @@
+@import "./import/variable";
+
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+
+  label {
+    order: initial;
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+    padding:$pad-text;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  div {
+    order: initial;
+    flex-grow: 1;
+    width: 100%;
+    display: none;    
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color:$light;
+  }
+
+  input[type="radio"]:checked + label + div {
+    display: block;
+  }
+}
+
+
+@media (min-width: 45em) {
+  .tab {
+    label {
+      order: 1;
+      max-width: max-content;
+      margin-right: 0.2rem;
+    }
+    div {
+      order: 99;
+    }
+  }
+}

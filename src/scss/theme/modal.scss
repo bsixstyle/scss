@@ -1,0 +1,10 @@
+@import "./variable.scss";
+
+.modal {
+  div {
+    @include themed() {
+      background: t("bg");
+      color: t("text");
+    }
+  }
+}

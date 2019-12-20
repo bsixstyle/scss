@@ -1,0 +1,20 @@
+@import "./import/variable";
+
+.box {
+  padding: $m $m;
+  background-color: transparent;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    display: block;
+    width: 100%;
+    border-bottom: $bdis $white;
+  }
+  list-style: none;
+}
+
+.outline {
+  border:$bd darken($light, 5%);
+}

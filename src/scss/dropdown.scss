@@ -1,0 +1,101 @@
+@import "./import/variable";
+
+.dropdown {
+  ul {
+    list-style:none;
+    background: white;
+    display: none;
+    @media (min-width: $med-m) {
+      position: absolute;
+    }
+    min-width: 6em;
+    border: $bd $light;
+    padding: 0 0.4em;
+    li {
+      margin: 0;
+      float: none;
+      &:hover {
+        text-shadow: 0 0 0.01em $dark, 0 0 0.02em $dark;
+      }
+    }
+  }
+
+  ul {
+    @media (min-width: $med-m) {
+      position: absolute;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    &:before {
+      display: none;
+    }
+  }
+
+  [type="checkbox"] {
+    display:none;
+  }
+
+  [type="checkbox"] {
+    &:checked ~ {
+      ul {
+        display: block;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+.collapse {
+  ul,
+  div {
+    display: none;
+    @media (min-width: $med-m) {
+      position: inherit;
+    }
+    min-width: 6em;
+    padding: $m;
+    li {
+      margin: 0;
+      float: none;
+      &:hover {
+        text-shadow: 0 0 0.01em $dark, 0 0 0.02em $dark;
+      }
+    }
+  }
+
+  ul,
+  div {
+    @media (min-width: $med-m) {
+      position: inherit;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    width: 100%;
+    display: block;    
+    padding-bottom: $m;
+    &:before {
+      display: none;
+    }
+    &:after {
+      content:" #";
+    }
+  }
+
+  [type="checkbox"] {
+    display:none;
+  }
+
+  [type="checkbox"] {
+    &:checked ~ {
+      ul,
+      div {
+        display: block;
+        z-index: 1;
+      }
+    }
+  }
+}

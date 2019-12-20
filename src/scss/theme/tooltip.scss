@@ -1,0 +1,8 @@
+[data-tooltip] {
+  &:after {
+    @include themed() {
+        background: t('shadow');
+        color: t('bg');
+    }
+  }
+}

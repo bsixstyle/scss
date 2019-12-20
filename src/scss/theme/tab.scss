@@ -1,0 +1,6 @@
+.tab {
+
+    input[type="radio"]:checked + label {
+        @include themed() { background-color: t("misc"); }
+      }
+}

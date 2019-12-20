@@ -1,0 +1,7 @@
+td {
+    @include themed() { border: t("border-form"); }
+}
+
+th {
+    @include themed() { border: t("border-form"); }
+  }

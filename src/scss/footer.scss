@@ -1,0 +1,9 @@
+@import "./import/variable";
+
+footer {
+    border-top: $bdis $light;
+    margin-top: 3.5em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    background-color: transparent;
+}
