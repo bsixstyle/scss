@@ -25,7 +25,11 @@ function Home() {
           the sources
         </a>{" "}
         is builtin up with react and scss, actually I made this framework for
-        personal needs, but if you want to use it, just use it.
+        personal needs, but if you want to use it, just use it, i just created
+        this framework for 2 days included this documentations, so i feel sorry
+        for minimum documentations. LOL..... and the router not solved yet,
+        because i published with gh-pages, this will makes you error 404 on
+        refresh if the path not valid "bsixstyle.github.com/scss".
       </p>
       <br />
       <hr />
@@ -62,7 +66,8 @@ function Home() {
       <h3>Why Dark Mode?</h3>
       <p>
         Now days peoples spent much time play with gadget, Let’s face it, dark
-        modes are trending. dark mode is save batery and does not make my eyes get tired more quickly.
+        modes are trending. dark mode is save batery and does not make my eyes
+        get tired more quickly.
       </p>
       <br />
       <hr />

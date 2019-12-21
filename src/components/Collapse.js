@@ -23,8 +23,10 @@ function Dropdown() {
           {`
 <div class="collapse">
   <input type="checkbox" id="clm" />
-  <label for="clm">Collapse</label>
-  <div class="outline"> <!--you can give style with box style-->
+  <label for="clm">
+  Click me
+  </label>
+  <div class="outline">
     <p>This is collapse</p>
   </div>
 </div>

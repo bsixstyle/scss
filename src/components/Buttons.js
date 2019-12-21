@@ -19,7 +19,7 @@ function Buttons() {
       <pre>
         <code className="lang-html">
           {`
-<button>button</button>&nbsp;
+<button>button</button>&nbsp;      
 <button class="active">active</button>&nbsp;
 <a class="button dark">dark</a>&nbsp;
 <input type="button" class="prime" value="prime" />&nbsp;

@@ -55,22 +55,22 @@ function Form() {
       <pre>
         <code className="lang-html">
           {`
-<div className="row">
-  <div className="c c6">
-    <div className="input">
+<div class="row">
+  <div class="c c6">
+    <div class="input">
       <label>Label</label>
       <input type="text" placeholder="text" required />
       <span class="danger">This field is required</span>
     </div>
   </div>
-  <div className="c c6">
-    <div className="input">
+  <div class="c c6">
+    <div class="input">
       <label>Label</label>
       <textarea placeholder="text area" />
     </div>
   </div>
 </div>
-<div className="input">
+<div class="input">
   <label>Label</label>
   <input type="text" placeholder="text" />
   <input type="text" placeholder="disabled" disabled />
@@ -82,22 +82,23 @@ function Form() {
   </select>
   <textarea placeholder="text area" />
 </div>
-<div className="input">
+<div class="input">
   <input type="checkbox" id="checkenable" />
-  <label htmlFor="checkenable">enable</label>&nbsp;
+  <label for="checkenable">enable</label>&nbsp;
   <input type="checkbox" id="checkdisabled" disabled />
-  <label htmlFor="checkdisabled">disabled</label>&nbsp;
+  <label for="checkdisabled">disabled</label>&nbsp;
   <input type="checkbox" id="checkeddisabled" checked disabled />
-  <label htmlFor="checkeddisabled">checked disabled</label>&nbsp;
+  <label for="checkeddisabled">checked disabled</label>&nbsp;
 </div>
-<div className="input">
+<div class="input">
   <input type="radio" id="radio1" name="radio" />
-  <label htmlFor="radio1">radio 1</label>&nbsp;
+  <label for="radio1">radio 1</label>&nbsp;
   <input type="radio" id="radio2" name="radio" />
-  <label htmlFor="radio2">radio 2</label>&nbsp;
+  <label for="radio2">radio 2</label>&nbsp;
   <input type="radio" id="radio3" name="radio" disabled />
-  <label htmlFor="radio3">disabled</label>&nbsp;
+  <label for="radio3">disabled</label>&nbsp;
 </div>
+<!-- you can remove div class input -->
           `.trim()}
         </code>
       </pre>

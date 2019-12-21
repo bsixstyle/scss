@@ -9,11 +9,13 @@ function LinkPage() {
     <Fragment>
       <h3>Footer</h3>
       <hr />
-      <Link to='#' className="link">Im a link</Link>
-           <pre>
+      <Link to="#" className="link">
+        Im a link
+      </Link>
+      <pre>
         <code className="lang-html">
           {`
-  <a className="link">Im a link</a>
+<a className="link">Im a link</a>
           `.trim()}
         </code>
       </pre>

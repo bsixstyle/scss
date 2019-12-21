@@ -51,8 +51,8 @@ function Box() {
           {`
 <div class="row">
   <div class="c">
-    <div class="box">
-      <h3>I'm default box</h3>
+    <div class="box prime">
+      <h3>I'm prime box</h3>
       <div>
         <p>What ever here</p>
       </div>
@@ -76,8 +76,8 @@ function Box() {
   </div>
 </div>
 <br />
-<div class="box outline danger">
-  <h3>I'm outline box</h3>
+<div class="box light">
+  <h3>I'm light box</h3>
   <div>
     <p>What ever here</p>
   </div>
@@ -86,6 +86,7 @@ function Box() {
 <div class="box warn">
   Alert?
 </div>
+<br />
           `.trim()}
         </code>
       </pre>

@@ -17,7 +17,7 @@ function Navigation() {
       <pre>
         <code className="lang-html">
           {`
-<ul className="box outline c c1">
+<ul className="box outline c c1"> <!-- c1 class just example -->
   <li><a>Menu 1</a></li>
   <li><a>Menu 2</a></li>
   <li><a>Menu 3</a></li>

@@ -27,11 +27,17 @@ function Dropdown() {
         <code className="lang-html">
           {`
 <div class="dropdown">
-  <input type="checkbox" id="ddm" />
-  <label for="ddm">Dropdown</label>
+<input type="checkbox" id="ddm" />
+<label for="ddm">
+  Click me
+</label>
   <ul>
-    <li><a>Default</a></li>
-    <li><a>Prime</a></li>
+    <li>
+      <a>Default</a>
+    </li>
+    <li>
+      <a>Prime</a>
+    </li>
   </ul>
 </div>
           `.trim()}

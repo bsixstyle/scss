@@ -67,9 +67,9 @@ function Grid() {
         </code>
       </pre>
 
-      <h3>This site Layout</h3>
+      <h3>This Layout Site</h3>
       <div class="c c2">
-        <div class="outline">c c1 absolute position</div>
+        <div class="outline">c c1 fixed position</div>
       </div>
       <div class="c c10 m2">
         <div class="outline">c c2 m2</div>
@@ -78,7 +78,7 @@ function Grid() {
         <code className="lang-html">
           {`
 <div class="c c2">
-  <div class="outline">c c1 absolute position sidebar</div>
+  <div class="outline">c c1 fixed position sidebar</div>
 </div>
 <div class="c c10 m2">
   <div class="outline">c c2 m2 header + contents</div>

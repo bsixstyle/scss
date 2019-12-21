@@ -160,6 +160,41 @@ function Modal() {
           </div>
         </div>
       </div>
+
+      <pre>
+        <code className="lang-html">
+          {`
+
+<a class="button" href="#modal2">Show another</a>
+<a class="button" href="#modal1">Open modal</a>
+<div id="modal1" class="modal">
+<div>
+  <h2>
+    Modal with close button
+    <a className="button" href="#">
+      &times;
+    </a>
+  </h2>
+  <div>
+    ...
+  </div>
+<button>Submit</button>
+</div>
+</div>
+
+<div id="modal2" class="modal">
+  <a class="cancel" href="#"></a>
+  <div>
+    <h2>Click outside to close</h2>
+    <div>
+    ...
+    </div>
+  </div>
+</div>
+
+          `.trim()}
+        </code>
+      </pre>
     </Fragment>
   );
 }

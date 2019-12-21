@@ -29,7 +29,9 @@ function Aside() {
           <Link onClick={hideMenu} to="/grid">
             Layout
           </Link>
-
+          <Link onClick={hideMenu} to="/themes">
+            Themes
+          </Link>
           <div className="collapse">
             <label htmlFor="collapse">Components</label>
             <input
